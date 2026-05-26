@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import ChatHistory from '../../components/ChatHistory/ChatHistory';
-import ChatWindow from '../../components/ChatWindow/ChatWindow';
+import ChatHistory from '../../components/chathistory/chathistory';
+import ChatWindow from '../../components/chatwindow/chatwindow';
 import ChatService from '../../services/ChatService';
 
 export default function ChatPage() {

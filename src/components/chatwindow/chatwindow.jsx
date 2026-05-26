@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Send } from 'lucide-react';
 import ChatService from './../../services/ChatService'; // Adjust path if necessary
-import './ChatWindow.css';
+import './chatwindow.css';
 
 export default function ChatWindow({ activeChat, onSendMessage }) {
   const [input, setInput] = useState('');
