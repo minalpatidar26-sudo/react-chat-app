@@ -1,6 +1,6 @@
 import React from 'react';
 import { MessageSquare, Plus } from 'lucide-react';
-import './ChatHistory.css';
+import './chathistory.css';
 
 export default function ChatHistory({
   chats,
