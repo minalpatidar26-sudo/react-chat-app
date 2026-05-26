@@ -1,0 +1,34 @@
+const BASE_URL = '/api';
+
+const ChatService = {
+  // GET chat/load-history
+  async loadHistory() {
+    try {
+      const response = await fetch(`${BASE_URL}/chat/load-history`);
+      if (!response.ok) throw new Error('Failed to load history');
+      return await response.json();
+    } catch (error) {
+      console.error('Error loading chat history:', error);
+      throw error;
+    }
+  },
+
+  // POST chat/message
+  async sendMessage(messageText) {
+    try {
+      const response = await fetch(`${BASE_URL}/chat/message`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message: messageText }),
+      });
+      if (!response.ok) throw new Error('Failed to send message');
+      return await response.json();
+    } catch (error) {
+      console.error('Error sending message:', error);
+      throw error;
+    }
+  },
+};
+export default ChatService;
